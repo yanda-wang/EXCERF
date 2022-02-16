@@ -20,7 +20,13 @@ To prepare data for OSHMem, put the following file in a file named as 'data' und
   
 +drug-atc.csv (you can find these three files in OSHMem/data)
 
-then run python DataProcessing.py, which would generate:
+then run
+
+'''
+python DataProcessing.py
+'''
+ 
+which would generate:
 
 +voc.pkl: vocabularies of diagnoses, procedures and medications.
 
