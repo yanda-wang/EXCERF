@@ -1,19 +1,19 @@
-# OSHMem
+# EXCELF
 
-This is the implement for the model OSHMem in the paper Ontology-Enhanced Self-Attention and Hierarchical Memory Neural Network for Medication Recommendation.
+This is the implement for the model EXCELF in the paper "Beyond EHRs: External Clinical Knowledge and Global Features for Medication Recommendation".
 
 # Data
 
-Experiments are carried out based on [MIMIC-III](https://mimic.physionet.org), a real-world Electoric Healthcare Records (EHRs) dataset comprising deidentified health-related data associated with over forty thousand patients. OSHMem takes diagnoses and procedures of patients as input, and the medications prescribed in the first 24 hours of each admission are selected out as ground truths.
+Experiments are carried out based on [MIMIC-III](https://mimic.physionet.org), a real-world Electoric Healthcare Records (EHRs) dataset comprising deidentified health-related data associated with over forty thousand patients. EXCLEF takes diagnoses and procedures of patients as input, and the medications prescribed in the first 24 hours of each admission are selected out as ground truths.
 
-To prepare data for OSHMem, put the following files in ./data under your project:
+To prepare data for EXCLEF, put the following files in ./data under your project:
 
 * PRESCRIPTIONS.csv
 * DIAGNOSES_ICD.csv
 * PROCEDURES_ICD.csv (you can download these three tables from [MIMIC-III](https://mimic.physionet.org))
 * ndc2rxnorm_mapping.txt
 * ndc2atc_level4.csv
-* drug-atc.csv (you can find these three files in OSHMem/data)
+* drug-atc.csv (you can find these three files in EXCLEF/data)
 
 then run
 
@@ -29,18 +29,18 @@ which would generate the following files in ./data under your project, you can a
 
 # Codes
 
-codes of OSHMem could be found in OSHMem/code
+codes of EXCLEF could be found in EXCLEF/code
 
-* DataProcessing.py: prepare all data files required by OSHMem from raw medical records.
+* DataProcessing.py: prepare all data files required by EXCLEF from raw medical records.
 * HyperOptim.py: hyper-parameters tuning.
 * HyperOptimUtils.py: basic modules for HyperOptim.
-* Models.py: networks of OSHMem.
-* Parameters.py: basic parameters for OSHMem.
-* run_model.py: code to run OSHMem
+* Models.py: networks of EXCLEF.
+* Parameters.py: basic parameters for EXCLEF.
+* run_model.py: code to run EXCLEF
 
 # To run the model
 
-To train OSHMem(suppose you want to put the model in data/model)
+To train EXCLEF(suppose you want to put the model in data/model)
 ```
 python run_model.py --do_train --save_model_dir data/model
 ```
