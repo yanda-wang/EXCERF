@@ -1,6 +1,6 @@
-# EXCELF
+# EXCERF
 
-This is the implement for the model EXCELF in the paper "Beyond EHRs: External Clinical Knowledge and Global Features for Medication Recommendation".
+This is the implement for the model EXCERF in the paper "Beyond EHRs: External Clinical Knowledge and Cohort Features for Medication Recommendation".
 
 # Data
 
