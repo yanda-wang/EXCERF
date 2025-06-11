@@ -4,16 +4,16 @@ This is the implement for the model EXCERF in the paper "Beyond EHRs: External C
 
 # Data
 
-Experiments are carried out based on [MIMIC-III](https://mimic.physionet.org), a real-world Electoric Healthcare Records (EHRs) dataset comprising deidentified health-related data associated with over forty thousand patients. EXCLEF takes diagnoses and procedures of patients as input, and the medications prescribed in the first 24 hours of each admission are selected out as ground truths.
+Experiments are carried out based on [MIMIC-III](https://mimic.physionet.org), a real-world Electoric Healthcare Records (EHRs) dataset comprising deidentified health-related data associated with over forty thousand patients. EXCERF takes diagnoses and procedures of patients as input, and the medications prescribed in the first 24 hours of each admission are selected out as ground truths.
 
-To prepare data for EXCLEF, put the following files in ./data under your project:
+To prepare data for EXCERF, put the following files in ./data under your project:
 
 * PRESCRIPTIONS.csv
 * DIAGNOSES_ICD.csv
 * PROCEDURES_ICD.csv (you can download these three tables from [MIMIC-III](https://mimic.physionet.org))
 * ndc2rxnorm_mapping.txt
 * ndc2atc_level4.csv
-* drug-atc.csv (you can find these three files in EXCLEF/data)
+* drug-atc.csv (you can find these three files in EXCERF/data)
 
 then run
 
@@ -29,18 +29,18 @@ which would generate the following files in ./data under your project, you can a
 
 # Codes
 
-codes of EXCLEF could be found in EXCLEF/code
+codes of EXCERF could be found in EXCERF/code
 
-* DataProcessing.py: prepare all data files required by EXCLEF from raw medical records.
+* DataProcessing.py: prepare all data files required by EXCERF from raw medical records.
 * HyperOptim.py: hyper-parameters tuning.
 * HyperOptimUtils.py: basic modules for HyperOptim.
-* Models.py: networks of EXCLEF.
-* Parameters.py: basic parameters for EXCLEF.
-* run_model.py: code to run EXCLEF
+* Models.py: networks of EXCERF.
+* Parameters.py: basic parameters for EXCERF.
+* run_model.py: code to run EXCERF
 
 # To run the model
 
-To train EXCLEF(suppose you want to put the model in data/model)
+To train EXCERF(suppose you want to put the model in data/model)
 ```
 python run_model.py --do_train --save_model_dir data/model
 ```
